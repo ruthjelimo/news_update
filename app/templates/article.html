@@ -1,0 +1,26 @@
+{% extends 'base.html'%} {% block content %}
+ {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='CSS/index.css')}}"> {% endblock %}
+<body>
+  <h1 align="center" class="text-capitalize"> {{id}} </h3>
+  <div class="container">
+    <div class="card-columns">
+      {% for article in articles %}
+      <div class="card">
+        <img class="card" src="{{article.image}}" alt="Card image cap"height="400px" width="1000px">
+        <div class="card-body">
+          <h5 class="card-title">{{article.author}}</h5>
+          <p class="card-text">{{article.description}}</p>
+          <a href="{{article.url}}">
+            <p class="card-text">Click here for more details!</p>
+          </a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Article date:{{article.time}}</small>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endblock %}
+</body>
