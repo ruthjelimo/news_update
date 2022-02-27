@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!-- Content block -->
+{% block content %}
+
+
+<h3> Popular News</h3>
+<ul>
+    {{ macro.displayNewsList(tech_news)}}
+</ul>
+ 
+ <h3> Upcoming News </h3>
+<ul>
+    {{ macro.displayNewsList(business_news)}}
+</ul> 
+ <h3>Now Showing</h3>
+<ul>
+    {{ macro.displayNewsList(sports_news)}}
+</ul>  
+
+
+{% endblock%}
+
