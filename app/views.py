@@ -20,7 +20,7 @@ def index():
     if search_news:
         return redirect(url_for('search',news_name=search_news))
     else:
-       return render_template('index.html', title=title,tech_news=tech_news,business_news=business_news,sports_news=sports_news)
+       return render_template('index.html', title=title,technology=tech_news,business=business_news,sports=sports_news)
 
 @app.route('/news/<string:id>')
 def news(id):
