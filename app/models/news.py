@@ -13,6 +13,8 @@ class News:
         self.description=description
         self.url=url
         self.category=category
+        
+
        
     
     
