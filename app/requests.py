@@ -92,3 +92,17 @@ def get_articles(id):
             news_object =News(id,description,url,name,category)
 
     return news_object
+def search_news(news_name):
+    search_news_url = 'https://newsapi.org/v2/top-headlines/sources?language=en&category={}&apiKey={}'
+    with urllib.request.urlopen(search_news_url) as url:
+        search_news_data = url.read()
+        search_news_response = json.loads(search_news_data)
+
+        search_news_results = None
+
+        if search_news_response['source']:
+            search_news_list = search_news_response['source']
+            search_news_results = process_results(search_news_list)
+
+
+    return search_news_results
