@@ -9,6 +9,14 @@
 {% block content %}
 
 
+<div class="container">
+    <form>
+        <input type="text" name="movie_query" placeholder="Search for news" class="form-control">
+        <input type="submit"  value="Submit" class="btn btn-default">
+    </form>
+
+</div>
+
 <h3> Popular News</h3>
 <ul>
     {{ macro.displayNewsList(tech_news)}}
