@@ -1,4 +1,4 @@
-.main {
+/* .main {
     flex: 1 1 0;
     display: flex;
 }
@@ -8,8 +8,8 @@
 .col-9 {
   overflow-y: auto;
   height: 90vh; /* NEW */
-}
-body{
+/* }
+body{ */
     /* background-color: aqua; */
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-}
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+} */ 
