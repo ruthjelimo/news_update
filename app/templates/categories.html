@@ -3,24 +3,24 @@
     <body>
     <h1 align="center" class="text-uppercase">OUR {{cat}} NEWS </h3>
         <div class="container">
-        <div class="card-columns">
-            {% for category in category %}
-            <div class="card">
-            <img class="card" src="{{category.image}}" alt="Card image cap" height="500px" width="1000px">
-            <div class="card-body">
-                <h5 class="card-title">{{category.author}}</h5>
-                <p class="card-text">{{category.description}}</p>
-                <a href="{{category.url}}">
-                <p class="card-text">
-                <button type="button" class="btn btn-primary">More news details</button></p>
-                </a>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Publish date:{{category.time}}</small>
-            </div>
-            </div>
-            {% endfor %}
+   
+   
+    <div class="row">
+        {% for category in category %}
+        <div class="col-md-4">
+          <img style="height: 200px;" src="{{category.image}}" alt="Card image cap">
+          <h5>{{category.author}}</h5>
+          <p>{{category.description}}</p>
+          <p>Publish date:{{category.time}}</p>
+          <a href="{{category.url}}">
+            <p>
+              <button type="button" class="btn btn-primary">More news details</button></p>
+          </a>
+         
+          
         </div>
-        </div>
-        {% endblock %}
-    </body>
+        {% endfor %}
+      </div>
+    </div>
+    
+{% endblock %}
